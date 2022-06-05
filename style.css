@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,500&display=swap');
+@import url('http://fonts.cdnfonts.com/css/eldes-cordel-1');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
 
 *{
     padding: 0;
@@ -6,20 +8,29 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url(./imagens/background.jpg);
+    background-size: cover;
+    position: relative;
+}
+
 html{
     font-size: 10px;
-    font-family: 'Poppins', 'Times New Roman', Times, serif ;
+    font-family: 'Hammersmith One', sans-serif;
+    /*'Poppins', 'Times New Roman', Times, serif ;*/
     scroll-behavior: smooth;
 }
 
 a{
     text-decoration: none;
 }
+
 img{
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
+
 p {
     font-size: 1.4rem;
     margin-top: 5px;
@@ -32,18 +43,20 @@ p {
     min-height: 100vh;
     width: 100%;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
+    
 }
 .section-title {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 500;
-    color: black;
+    color: #60310f;
     margin-bottom: 10px;
     margin-top: 5px;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     text-align: center;
+    font-family: 'Eldes Cordel 1', sans-serif;
 }
 
 
@@ -51,16 +64,20 @@ p {
 /* Seção de apresentação */
 
 #presentation{
-    background-image: url(./background.jpeg);
-    background-size: cover;
-    background-position: top center;
-    position: relative;
     z-index: 1;
+    display: flex;
 }
+
+#presentation .img-presentation{
+    opacity: 0.8;
+    width: 27%;
+}
+
 #presentation h1{
-    display: block;
+    display: flex;
+    font-family: 'Eldes Cordel 1', sans-serif;
     width: fit-content;
-    font-size: 5rem;
+    font-size: 7rem;
     position: relative;
     color: transparent;
     animation: text_reveal .5s ease forwards;
@@ -79,9 +96,9 @@ p {
 #presentation .cta{
     display: inline-block;
     padding: 10px 30px;
-    color: gold;
-    background-color: transparent;
-    border: 2px solid gold;
+    color: #ffffff;
+    background-color: #361400;
+    border-radius: 6px;
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
@@ -91,10 +108,12 @@ p {
 
 }
 #presentation .cta:hover{
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: 500;
-    background-color: gold;
+    background-color: #ffd629;
+    box-shadow: 0 0 1.5em rgba(255, 217, 0, 0.555);
 }
+
 #presentation h1 span{
     position: absolute;
     top: 0;
@@ -103,7 +122,7 @@ p {
     width: 0%;
     animation: text_reveal_box 1s ease;
     animation-delay: .5s;
-    background-color: gold;
+    background-color: #ffd629;
 }
 #presentation h1:nth-child(1) span{
     animation-delay: .5s;
@@ -121,29 +140,71 @@ p {
     top: 0;
     height:100%;
     width: 100%;
-    background-color:black;
-    opacity: 0.5;
+    background-color:#7e7e7e;
+    opacity: 0.4;
     z-index: -1;
 }
 
 /* Seção de Portifólio */
+/*.linha{
+    width: 100%;
+    border: 10px solid rgb(10, 10, 10);
+}*/
 
-#portfolio .portfolio{
+#estados{
+    /*background-image: url(./imagens/background.jpg);
+    background-size: cover;
+    position: relative;*/
+    background-color: #ffffff4f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 6px;
+}
+
+#estados .estados{
     flex-direction: column;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 100px 0;
+    display: flex;
+    align-items: center;
 }
-#portfolio .portfolio-header h1{
-    margin-bottom: 50px;
+
+#estados .estados .header{
+    padding: 30px 0;
 }
-#portfolio .all-projects {
+
+#estados img{
+    width: 100%;
+}
+
+#estados .header img{
+    width: 70%;
+}
+
+#estados .geral-estados {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-#portfolio .project-item{
+
+#estados .geral-estados h1{
+    font-family: 'Eldes Cordel 1', sans-serif;
+}
+
+#estados .geral-estados a{
+    text-decoration: none;
+    background-color: #240d00;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 50px;
+    line-height: 30px;
+    font-size: 2.2rem;
+    font-family: 'Eldes Cordel 1', sans-serif;
+}
+
+#estados .estd-item{
     display:flex;
     align-items: center;
     justify-content: center;
@@ -154,7 +215,7 @@ p {
     border-radius: 10px;
 }
 
-#portfolio .project-info {
+#estados .estd-info {
     padding: 30px;
     flex-basis: 50%;
     height: 100%;
@@ -162,55 +223,76 @@ p {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    background-image: linear-gradient(60deg, #5a10b5 0%, #002349 100%);
-    color: white;
+    background-image: linear-gradient(60deg, #ffd629 50%, #60310f 100%);
+    color: #240d00;
 }
 
-#portfolio .project-info h1{
-    font-size: 4rem;
+#estados .estd-info h1{
+    font-size: 4.5rem;
     font-weight: 500;
 }
 
-#portfolio .project-info h2{
+#estados .estd-info h2{
     font-size: 1.8rem;
     font-weight: 500;
     margin-top: 10px;
 }
 
-#portfolio .project-img {
+#estados .estd-img {
     flex-basis: 50%;
     height: 300px;
     overflow: hidden;
     position: relative;
 }
 
-#portfolio .project-img:after {
+#estados .geral-estados a:hover{
+    color: rgb(255 255 255);
+    font-weight: 500;
+    background-color: #60310f;
+    box-shadow: 0 0 1em #60310f;
+}
+
+
+#estados .estd-img:after {
     content: '';
     position: absolute;
     left: 0;
     top:0;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
     opacity: 0.7;
+    background-image: linear-gradient(60deg, #60310f 50%, #361400 50%);
 }
-#portfolio .project-img img{
+#estados .estd-img img{
     transition: 0.5s ease transform;
 }
-#portfolio .project-item:hover .project-img img{
+#estados .estd-item:hover .estd-img img{
     transform: scale(1.1);
+}
+
+footer{
+    background-color: rgba(122, 49, 0, 0.829);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2;
+    color: rgb(255, 255, 255);
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 15px;
+    width: 89%;
+    margin: 0 auto;
 }
 
 /* Keyframes */
 
 @keyframes text_reveal{
     100%{
-        color: white;
+        color: #361400;
     }
 }
 @keyframes text_reveal_name{
     100%{
-        color: gold;
+        color: #60310f;
         font-weight: 500px;
     }
 }
@@ -228,20 +310,20 @@ p {
 
 /* Media Query */
 @media only screen and (min-width: 768px) {
-    #portfolio .project-item {
+    #estados .estd-item {
         flex-direction: row;
         height: 400px;
         margin: 0;
         width: 100%;
         border-radius: 0;
     }
-    #portfolio .all-projects .project-info{
+    #estados .geral-estados .estd-info{
         height: 100%
     }
-    #portfolio .all-projects .project-img{
+    #estados .geral-estados .estd-img{
         height: 100%
     }
-    #portfolio .project-item:nth-child(even) {
+    #estados .estd-item:nth-child(even) {
         flex-direction: row-reverse;
     }
 
