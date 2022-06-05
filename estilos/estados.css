@@ -15,9 +15,8 @@ body{
 }
 
 html{
-    font-size: 10px;
+    font-size: 0.625rem;
     font-family: 'Hammersmith One', sans-serif;
-    /*'Poppins', 'Times New Roman', Times, serif ;*/
     scroll-behavior: smooth;
 }
 
@@ -38,6 +37,7 @@ p {
     font-weight: 200;
     letter-spacing: 0.05rem;
 }
+
 
 .container{
     min-height: 100vh;
@@ -107,7 +107,7 @@ p {
 
 .intro p:nth-child(2){
     color: #60310f;
-    font-size: 22px;
+    font-size: 20.8px;
 }
 
 .intro p:nth-child(3){
@@ -203,8 +203,14 @@ p {
 
 #turismo .geral-turismo h2{
     font-family: 'Eldes Cordel 1', sans-serif;
-    font-size: 12px;
-    text-shadow: 3px 3px 1px rgb(212, 163, 0);
+    font-size: 0.75rem;
+    color:#ffffffd2;
+    letter-spacing: 0.188rem;
+    text-shadow: 2px 2px 4px rgb(104, 47, 0);
+}
+
+#turismo .geral-turismo p{
+    font-size: 15px;
 }
 
 #turismo .geral-turismo a{
@@ -213,8 +219,9 @@ p {
     color: white;
     margin-top: 10px;
     padding: 10px;
-    border-radius: 50px;
-    line-height: 30px;
+    border-radius: 3.1rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.4rem;
     font-size: 2.2rem;
     font-family: 'Eldes Cordel 1', sans-serif;
 }
@@ -298,7 +305,6 @@ footer{
     margin: 0 auto;
 }
 
-/* Keyframes */
 
 @keyframes text_reveal{
     100%{
@@ -318,7 +324,7 @@ footer{
     }
 }
 
-/* Media Query */
+
 @media only screen and (min-width: 768px) {
     #turismo .estd-item {
         flex-direction: row;
@@ -336,6 +342,4 @@ footer{
     #turismo .estd-item:nth-child(even) {
         flex-direction: row-reverse;
     }
-
-
 }

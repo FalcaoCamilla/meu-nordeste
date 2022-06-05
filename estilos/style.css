@@ -9,7 +9,7 @@
 }
 
 body{
-    background-image: url(./imagens/background.jpg);
+    background-image: url(../imagens/background.jpg);
     background-size: cover;
     position: relative;
 }
@@ -17,7 +17,6 @@ body{
 html{
     font-size: 10px;
     font-family: 'Hammersmith One', sans-serif;
-    /*'Poppins', 'Times New Roman', Times, serif ;*/
     scroll-behavior: smooth;
 }
 
@@ -60,8 +59,6 @@ p {
 }
 
 
-
-/* Seção de apresentação */
 
 #presentation{
     z-index: 1;
@@ -145,16 +142,7 @@ p {
     z-index: -1;
 }
 
-/* Seção de Portifólio */
-/*.linha{
-    width: 100%;
-    border: 10px solid rgb(10, 10, 10);
-}*/
-
 #estados{
-    /*background-image: url(./imagens/background.jpg);
-    background-size: cover;
-    position: relative;*/
     background-color: #ffffff4f;
     display: flex;
     align-items: center;
@@ -192,6 +180,11 @@ p {
     font-family: 'Eldes Cordel 1', sans-serif;
 }
 
+
+#estados .geral-estados p{
+    font-size: 15px;
+}
+
 #estados .geral-estados a{
     text-decoration: none;
     background-color: #240d00;
@@ -200,8 +193,9 @@ p {
     padding: 10px;
     border-radius: 50px;
     line-height: 30px;
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-family: 'Eldes Cordel 1', sans-serif;
+    letter-spacing: 0.3rem;
 }
 
 #estados .estd-item{
@@ -233,7 +227,7 @@ p {
 }
 
 #estados .estd-info h2{
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 500;
     margin-top: 10px;
 }
@@ -283,7 +277,6 @@ footer{
     margin: 0 auto;
 }
 
-/* Keyframes */
 
 @keyframes text_reveal{
     100%{
@@ -308,7 +301,7 @@ footer{
     }
 }
 
-/* Media Query */
+
 @media only screen and (min-width: 768px) {
     #estados .estd-item {
         flex-direction: row;
@@ -326,6 +319,4 @@ footer{
     #estados .estd-item:nth-child(even) {
         flex-direction: row-reverse;
     }
-
-
 }
